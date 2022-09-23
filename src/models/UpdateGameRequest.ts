@@ -20,7 +20,19 @@ import { exists, mapValues } from '../runtime';
  */
 export interface UpdateGameRequest {
     /**
-     * The game's current password. Must be provided if setting `newPassword`.
+     * A new name. Replaces the game's current name.
+     * @type {string}
+     * @memberof UpdateGameRequest
+     */
+    name?: string;
+    /**
+     * A new email address. The game's old email will no longer be valid for account authentication. `currentPassword` must also be provided.
+     * @type {string}
+     * @memberof UpdateGameRequest
+     */
+    email?: string;
+    /**
+     * The game's current password. Must be provided if setting `newPassword` or `email`.
      * @type {string}
      * @memberof UpdateGameRequest
      */
@@ -75,6 +87,8 @@ export function UpdateGameRequestFromJSONTyped(json: any, ignoreDiscriminator: b
     }
     return {
         
+        'name': !exists(json, 'name') ? undefined : json['name'],
+        'email': !exists(json, 'email') ? undefined : json['email'],
         'currentPassword': !exists(json, 'currentPassword') ? undefined : json['currentPassword'],
         'newPassword': !exists(json, 'newPassword') ? undefined : json['newPassword'],
         'rpcs': !exists(json, 'rpcs') ? undefined : json['rpcs'],
@@ -92,6 +106,8 @@ export function UpdateGameRequestToJSON(value?: UpdateGameRequest | null): any {
     }
     return {
         
+        'name': value.name,
+        'email': value.email,
         'currentPassword': value.currentPassword,
         'newPassword': value.newPassword,
         'rpcs': value.rpcs,
