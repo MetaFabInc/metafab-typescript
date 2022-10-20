@@ -3,6 +3,7 @@
 export * from './ContractsApi';
 export * from './CurrenciesApi';
 export * from './GamesApi';
+export * from './ItemsApi';
 export * from './PlayersApi';
 export * from './TransactionsApi';
 export * from './WalletsApi';

@@ -1,6 +1,6 @@
 {
   "name": "metafab-typescript-fetch",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "OpenAPI client for metafab-typescript-fetch",
   "author": "OpenAPI-Generator",
   "repository": {

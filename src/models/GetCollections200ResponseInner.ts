@@ -13,76 +13,71 @@
  */
 
 import { exists, mapValues } from '../runtime';
+import type { CollectionModel } from './CollectionModel';
+import {
+    CollectionModelFromJSON,
+    CollectionModelFromJSONTyped,
+    CollectionModelToJSON,
+} from './CollectionModel';
+
 /**
  * 
  * @export
- * @interface ContractModel
+ * @interface GetCollections200ResponseInner
  */
-export interface ContractModel {
+export interface GetCollections200ResponseInner {
     /**
      * This field has not had a description added.
      * @type {string}
-     * @memberof ContractModel
+     * @memberof GetCollections200ResponseInner
      */
     id?: string;
     /**
      * This field has not had a description added.
      * @type {string}
-     * @memberof ContractModel
+     * @memberof GetCollections200ResponseInner
      */
     gameId?: string;
     /**
      * This field has not had a description added.
      * @type {string}
-     * @memberof ContractModel
+     * @memberof GetCollections200ResponseInner
      */
-    chain?: string;
-    /**
-     * This field has not had a description added.
-     * @type {object}
-     * @memberof ContractModel
-     */
-    abi?: object;
+    contractId?: string;
     /**
      * This field has not had a description added.
      * @type {string}
-     * @memberof ContractModel
-     */
-    type?: string;
-    /**
-     * This field has not had a description added.
-     * @type {string}
-     * @memberof ContractModel
-     */
-    address?: string;
-    /**
-     * This field has not had a description added.
-     * @type {string}
-     * @memberof ContractModel
+     * @memberof GetCollections200ResponseInner
      */
     updatedAt?: string;
     /**
      * This field has not had a description added.
      * @type {string}
-     * @memberof ContractModel
+     * @memberof GetCollections200ResponseInner
      */
     createdAt?: string;
+    /**
+     * 
+     * @type {CollectionModel}
+     * @memberof GetCollections200ResponseInner
+     */
+    contract?: CollectionModel;
 }
 
 /**
- * Check if a given object implements the ContractModel interface.
+ * Check if a given object implements the GetCollections200ResponseInner interface.
  */
-export function instanceOfContractModel(value: object): boolean {
+export function instanceOfGetCollections200ResponseInner(value: object): boolean {
     let isInstance = true;
 
     return isInstance;
 }
 
-export function ContractModelFromJSON(json: any): ContractModel {
-    return ContractModelFromJSONTyped(json, false);
+export function GetCollections200ResponseInnerFromJSON(json: any): GetCollections200ResponseInner {
+    return GetCollections200ResponseInnerFromJSONTyped(json, false);
 }
 
-export function ContractModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): ContractModel {
+export function GetCollections200ResponseInnerFromJSONTyped(json: any, ignoreDiscriminator: boolean): GetCollections200ResponseInner {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -90,16 +85,14 @@ export function ContractModelFromJSONTyped(json: any, ignoreDiscriminator: boole
         
         'id': !exists(json, 'id') ? undefined : json['id'],
         'gameId': !exists(json, 'gameId') ? undefined : json['gameId'],
-        'chain': !exists(json, 'chain') ? undefined : json['chain'],
-        'abi': !exists(json, 'abi') ? undefined : json['abi'],
-        'type': !exists(json, 'type') ? undefined : json['type'],
-        'address': !exists(json, 'address') ? undefined : json['address'],
+        'contractId': !exists(json, 'contractId') ? undefined : json['contractId'],
         'updatedAt': !exists(json, 'updatedAt') ? undefined : json['updatedAt'],
         'createdAt': !exists(json, 'createdAt') ? undefined : json['createdAt'],
+        'contract': !exists(json, 'contract') ? undefined : CollectionModelFromJSON(json['contract']),
     };
 }
 
-export function ContractModelToJSON(value?: ContractModel | null): any {
+export function GetCollections200ResponseInnerToJSON(value?: GetCollections200ResponseInner | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -110,12 +103,10 @@ export function ContractModelToJSON(value?: ContractModel | null): any {
         
         'id': value.id,
         'gameId': value.gameId,
-        'chain': value.chain,
-        'abi': value.abi,
-        'type': value.type,
-        'address': value.address,
+        'contractId': value.contractId,
         'updatedAt': value.updatedAt,
         'createdAt': value.createdAt,
+        'contract': CollectionModelToJSON(value.contract),
     };
 }
 
