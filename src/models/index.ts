@@ -17,7 +17,6 @@ export * from './CreateCollection200ResponseAllOfContract';
 export * from './CreateCollection200ResponseAllOfContractAllOf';
 export * from './CreateCollectionItemRequest';
 export * from './CreateCollectionItemRequestAttributesInner';
-export * from './CreateCollectionItemRequestAttributesInnerValue';
 export * from './CreateCollectionRequest';
 export * from './CreateContractRequest';
 export * from './CreateCurrency200Response';

@@ -28,7 +28,6 @@ src/models/CreateCollection200ResponseAllOfContract.ts
 src/models/CreateCollection200ResponseAllOfContractAllOf.ts
 src/models/CreateCollectionItemRequest.ts
 src/models/CreateCollectionItemRequestAttributesInner.ts
-src/models/CreateCollectionItemRequestAttributesInnerValue.ts
 src/models/CreateCollectionRequest.ts
 src/models/CreateContractRequest.ts
 src/models/CreateCurrency200Response.ts
