@@ -16,45 +16,45 @@ import { exists, mapValues } from '../runtime';
 /**
  * 
  * @export
- * @interface CreateCollectionRequest
+ * @interface CreateExchangeRequest
  */
-export interface CreateCollectionRequest {
+export interface CreateExchangeRequest {
     /**
-     * The blockchain you want to deploy this item collection on. Support for new blockchains are added over time.
+     * The blockchain you want to deploy this exchange on. Support for new blockchains are added over time.
      * @type {string}
-     * @memberof CreateCollectionRequest
+     * @memberof CreateExchangeRequest
      */
-    chain: CreateCollectionRequestChainEnum;
+    chain: CreateExchangeRequestChainEnum;
 }
 
 
 /**
  * @export
  */
-export const CreateCollectionRequestChainEnum = {
+export const CreateExchangeRequestChainEnum = {
     Ethereum: 'ETHEREUM',
     Goerli: 'GOERLI',
     Matic: 'MATIC',
     Mumbai: 'MUMBAI'
 } as const;
-export type CreateCollectionRequestChainEnum = typeof CreateCollectionRequestChainEnum[keyof typeof CreateCollectionRequestChainEnum];
+export type CreateExchangeRequestChainEnum = typeof CreateExchangeRequestChainEnum[keyof typeof CreateExchangeRequestChainEnum];
 
 
 /**
- * Check if a given object implements the CreateCollectionRequest interface.
+ * Check if a given object implements the CreateExchangeRequest interface.
  */
-export function instanceOfCreateCollectionRequest(value: object): boolean {
+export function instanceOfCreateExchangeRequest(value: object): boolean {
     let isInstance = true;
     isInstance = isInstance && "chain" in value;
 
     return isInstance;
 }
 
-export function CreateCollectionRequestFromJSON(json: any): CreateCollectionRequest {
-    return CreateCollectionRequestFromJSONTyped(json, false);
+export function CreateExchangeRequestFromJSON(json: any): CreateExchangeRequest {
+    return CreateExchangeRequestFromJSONTyped(json, false);
 }
 
-export function CreateCollectionRequestFromJSONTyped(json: any, ignoreDiscriminator: boolean): CreateCollectionRequest {
+export function CreateExchangeRequestFromJSONTyped(json: any, ignoreDiscriminator: boolean): CreateExchangeRequest {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -64,7 +64,7 @@ export function CreateCollectionRequestFromJSONTyped(json: any, ignoreDiscrimina
     };
 }
 
-export function CreateCollectionRequestToJSON(value?: CreateCollectionRequest | null): any {
+export function CreateExchangeRequestToJSON(value?: CreateExchangeRequest | null): any {
     if (value === undefined) {
         return undefined;
     }

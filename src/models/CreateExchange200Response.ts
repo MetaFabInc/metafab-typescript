@@ -13,76 +13,71 @@
  */
 
 import { exists, mapValues } from '../runtime';
+import type { CreateCollection200ResponseAllOfContract } from './CreateCollection200ResponseAllOfContract';
+import {
+    CreateCollection200ResponseAllOfContractFromJSON,
+    CreateCollection200ResponseAllOfContractFromJSONTyped,
+    CreateCollection200ResponseAllOfContractToJSON,
+} from './CreateCollection200ResponseAllOfContract';
+
 /**
  * 
  * @export
- * @interface ContractModel
+ * @interface CreateExchange200Response
  */
-export interface ContractModel {
+export interface CreateExchange200Response {
     /**
      * This field has not had a description added.
      * @type {string}
-     * @memberof ContractModel
+     * @memberof CreateExchange200Response
      */
     id?: string;
     /**
      * This field has not had a description added.
      * @type {string}
-     * @memberof ContractModel
+     * @memberof CreateExchange200Response
      */
     gameId?: string;
     /**
      * This field has not had a description added.
      * @type {string}
-     * @memberof ContractModel
+     * @memberof CreateExchange200Response
      */
-    chain?: string;
-    /**
-     * This field has not had a description added.
-     * @type {object}
-     * @memberof ContractModel
-     */
-    abi?: object;
+    contractId?: string;
     /**
      * This field has not had a description added.
      * @type {string}
-     * @memberof ContractModel
-     */
-    type?: string;
-    /**
-     * This field has not had a description added.
-     * @type {string}
-     * @memberof ContractModel
-     */
-    address?: string;
-    /**
-     * This field has not had a description added.
-     * @type {string}
-     * @memberof ContractModel
+     * @memberof CreateExchange200Response
      */
     updatedAt?: string;
     /**
      * This field has not had a description added.
      * @type {string}
-     * @memberof ContractModel
+     * @memberof CreateExchange200Response
      */
     createdAt?: string;
+    /**
+     * 
+     * @type {CreateCollection200ResponseAllOfContract}
+     * @memberof CreateExchange200Response
+     */
+    contract?: CreateCollection200ResponseAllOfContract;
 }
 
 /**
- * Check if a given object implements the ContractModel interface.
+ * Check if a given object implements the CreateExchange200Response interface.
  */
-export function instanceOfContractModel(value: object): boolean {
+export function instanceOfCreateExchange200Response(value: object): boolean {
     let isInstance = true;
 
     return isInstance;
 }
 
-export function ContractModelFromJSON(json: any): ContractModel {
-    return ContractModelFromJSONTyped(json, false);
+export function CreateExchange200ResponseFromJSON(json: any): CreateExchange200Response {
+    return CreateExchange200ResponseFromJSONTyped(json, false);
 }
 
-export function ContractModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): ContractModel {
+export function CreateExchange200ResponseFromJSONTyped(json: any, ignoreDiscriminator: boolean): CreateExchange200Response {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -90,16 +85,14 @@ export function ContractModelFromJSONTyped(json: any, ignoreDiscriminator: boole
         
         'id': !exists(json, 'id') ? undefined : json['id'],
         'gameId': !exists(json, 'gameId') ? undefined : json['gameId'],
-        'chain': !exists(json, 'chain') ? undefined : json['chain'],
-        'abi': !exists(json, 'abi') ? undefined : json['abi'],
-        'type': !exists(json, 'type') ? undefined : json['type'],
-        'address': !exists(json, 'address') ? undefined : json['address'],
+        'contractId': !exists(json, 'contractId') ? undefined : json['contractId'],
         'updatedAt': !exists(json, 'updatedAt') ? undefined : json['updatedAt'],
         'createdAt': !exists(json, 'createdAt') ? undefined : json['createdAt'],
+        'contract': !exists(json, 'contract') ? undefined : CreateCollection200ResponseAllOfContractFromJSON(json['contract']),
     };
 }
 
-export function ContractModelToJSON(value?: ContractModel | null): any {
+export function CreateExchange200ResponseToJSON(value?: CreateExchange200Response | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -110,12 +103,10 @@ export function ContractModelToJSON(value?: ContractModel | null): any {
         
         'id': value.id,
         'gameId': value.gameId,
-        'chain': value.chain,
-        'abi': value.abi,
-        'type': value.type,
-        'address': value.address,
+        'contractId': value.contractId,
         'updatedAt': value.updatedAt,
         'createdAt': value.createdAt,
+        'contract': CreateCollection200ResponseAllOfContractToJSON(value.contract),
     };
 }
 
