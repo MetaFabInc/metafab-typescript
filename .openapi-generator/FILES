@@ -52,6 +52,9 @@ src/models/GrantCurrencyRoleRequest.ts
 src/models/MintCollectionItemRequest.ts
 src/models/MintCurrencyRequest.ts
 src/models/PlayerModel.ts
+src/models/PublicGame.ts
+src/models/PublicPlayer.ts
+src/models/PublicPlayerWallet.ts
 src/models/RevokeCollectionRoleRequest.ts
 src/models/SetCollectionApprovalRequest.ts
 src/models/SetCollectionItemTimelockRequest.ts

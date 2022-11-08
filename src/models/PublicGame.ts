@@ -16,104 +16,69 @@ import { exists, mapValues } from '../runtime';
 /**
  * 
  * @export
- * @interface GameModel
+ * @interface PublicGame
  */
-export interface GameModel {
+export interface PublicGame {
     /**
      * This field has not had a description added.
      * @type {string}
-     * @memberof GameModel
+     * @memberof PublicGame
      */
     id?: string;
     /**
      * This field has not had a description added.
      * @type {string}
-     * @memberof GameModel
-     */
-    walletId?: string;
-    /**
-     * This field has not had a description added.
-     * @type {string}
-     * @memberof GameModel
-     */
-    fundingWalletId?: string;
-    /**
-     * This field has not had a description added.
-     * @type {string}
-     * @memberof GameModel
-     */
-    email?: string;
-    /**
-     * This field has not had a description added.
-     * @type {string}
-     * @memberof GameModel
+     * @memberof PublicGame
      */
     name?: string;
     /**
      * This field has not had a description added.
-     * @type {object}
-     * @memberof GameModel
-     */
-    rpcs?: object;
-    /**
-     * This field has not had a description added.
      * @type {string}
-     * @memberof GameModel
+     * @memberof PublicGame
      */
     publishedKey?: string;
     /**
      * This field has not had a description added.
      * @type {string}
-     * @memberof GameModel
-     */
-    secretKey?: string;
-    /**
-     * This field has not had a description added.
-     * @type {string}
-     * @memberof GameModel
+     * @memberof PublicGame
      */
     updatedAt?: string;
     /**
      * This field has not had a description added.
      * @type {string}
-     * @memberof GameModel
+     * @memberof PublicGame
      */
     createdAt?: string;
 }
 
 /**
- * Check if a given object implements the GameModel interface.
+ * Check if a given object implements the PublicGame interface.
  */
-export function instanceOfGameModel(value: object): boolean {
+export function instanceOfPublicGame(value: object): boolean {
     let isInstance = true;
 
     return isInstance;
 }
 
-export function GameModelFromJSON(json: any): GameModel {
-    return GameModelFromJSONTyped(json, false);
+export function PublicGameFromJSON(json: any): PublicGame {
+    return PublicGameFromJSONTyped(json, false);
 }
 
-export function GameModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): GameModel {
+export function PublicGameFromJSONTyped(json: any, ignoreDiscriminator: boolean): PublicGame {
     if ((json === undefined) || (json === null)) {
         return json;
     }
     return {
         
         'id': !exists(json, 'id') ? undefined : json['id'],
-        'walletId': !exists(json, 'walletId') ? undefined : json['walletId'],
-        'fundingWalletId': !exists(json, 'fundingWalletId') ? undefined : json['fundingWalletId'],
-        'email': !exists(json, 'email') ? undefined : json['email'],
         'name': !exists(json, 'name') ? undefined : json['name'],
-        'rpcs': !exists(json, 'rpcs') ? undefined : json['rpcs'],
         'publishedKey': !exists(json, 'publishedKey') ? undefined : json['publishedKey'],
-        'secretKey': !exists(json, 'secretKey') ? undefined : json['secretKey'],
         'updatedAt': !exists(json, 'updatedAt') ? undefined : json['updatedAt'],
         'createdAt': !exists(json, 'createdAt') ? undefined : json['createdAt'],
     };
 }
 
-export function GameModelToJSON(value?: GameModel | null): any {
+export function PublicGameToJSON(value?: PublicGame | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -123,13 +88,8 @@ export function GameModelToJSON(value?: GameModel | null): any {
     return {
         
         'id': value.id,
-        'walletId': value.walletId,
-        'fundingWalletId': value.fundingWalletId,
-        'email': value.email,
         'name': value.name,
-        'rpcs': value.rpcs,
         'publishedKey': value.publishedKey,
-        'secretKey': value.secretKey,
         'updatedAt': value.updatedAt,
         'createdAt': value.createdAt,
     };

@@ -13,71 +13,77 @@
  */
 
 import { exists, mapValues } from '../runtime';
-import type { ContractModel } from './ContractModel';
+import type { PublicPlayerWallet } from './PublicPlayerWallet';
 import {
-    ContractModelFromJSON,
-    ContractModelFromJSONTyped,
-    ContractModelToJSON,
-} from './ContractModel';
+    PublicPlayerWalletFromJSON,
+    PublicPlayerWalletFromJSONTyped,
+    PublicPlayerWalletToJSON,
+} from './PublicPlayerWallet';
 
 /**
  * 
  * @export
- * @interface GetExchanges200ResponseInner
+ * @interface PublicPlayer
  */
-export interface GetExchanges200ResponseInner {
+export interface PublicPlayer {
     /**
      * This field has not had a description added.
      * @type {string}
-     * @memberof GetExchanges200ResponseInner
+     * @memberof PublicPlayer
      */
     id?: string;
     /**
      * This field has not had a description added.
      * @type {string}
-     * @memberof GetExchanges200ResponseInner
+     * @memberof PublicPlayer
      */
     gameId?: string;
     /**
      * This field has not had a description added.
      * @type {string}
-     * @memberof GetExchanges200ResponseInner
+     * @memberof PublicPlayer
      */
-    contractId?: string;
+    walletId?: string;
     /**
      * This field has not had a description added.
      * @type {string}
-     * @memberof GetExchanges200ResponseInner
+     * @memberof PublicPlayer
+     */
+    username?: string;
+    /**
+     * This field has not had a description added.
+     * @type {string}
+     * @memberof PublicPlayer
      */
     updatedAt?: string;
     /**
      * This field has not had a description added.
      * @type {string}
-     * @memberof GetExchanges200ResponseInner
+     * @memberof PublicPlayer
      */
     createdAt?: string;
     /**
      * 
-     * @type {ContractModel}
-     * @memberof GetExchanges200ResponseInner
+     * @type {PublicPlayerWallet}
+     * @memberof PublicPlayer
      */
-    contract?: ContractModel;
+    wallet?: PublicPlayerWallet;
 }
 
 /**
- * Check if a given object implements the GetExchanges200ResponseInner interface.
+ * Check if a given object implements the PublicPlayer interface.
  */
-export function instanceOfGetExchanges200ResponseInner(value: object): boolean {
+export function instanceOfPublicPlayer(value: object): boolean {
     let isInstance = true;
 
     return isInstance;
 }
 
-export function GetExchanges200ResponseInnerFromJSON(json: any): GetExchanges200ResponseInner {
-    return GetExchanges200ResponseInnerFromJSONTyped(json, false);
+export function PublicPlayerFromJSON(json: any): PublicPlayer {
+    return PublicPlayerFromJSONTyped(json, false);
 }
 
-export function GetExchanges200ResponseInnerFromJSONTyped(json: any, ignoreDiscriminator: boolean): GetExchanges200ResponseInner {
+export function PublicPlayerFromJSONTyped(json: any, ignoreDiscriminator: boolean): PublicPlayer {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -85,14 +91,15 @@ export function GetExchanges200ResponseInnerFromJSONTyped(json: any, ignoreDiscr
         
         'id': !exists(json, 'id') ? undefined : json['id'],
         'gameId': !exists(json, 'gameId') ? undefined : json['gameId'],
-        'contractId': !exists(json, 'contractId') ? undefined : json['contractId'],
+        'walletId': !exists(json, 'walletId') ? undefined : json['walletId'],
+        'username': !exists(json, 'username') ? undefined : json['username'],
         'updatedAt': !exists(json, 'updatedAt') ? undefined : json['updatedAt'],
         'createdAt': !exists(json, 'createdAt') ? undefined : json['createdAt'],
-        'contract': !exists(json, 'contract') ? undefined : ContractModelFromJSON(json['contract']),
+        'wallet': !exists(json, 'wallet') ? undefined : PublicPlayerWalletFromJSON(json['wallet']),
     };
 }
 
-export function GetExchanges200ResponseInnerToJSON(value?: GetExchanges200ResponseInner | null): any {
+export function PublicPlayerToJSON(value?: PublicPlayer | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -103,10 +110,11 @@ export function GetExchanges200ResponseInnerToJSON(value?: GetExchanges200Respon
         
         'id': value.id,
         'gameId': value.gameId,
-        'contractId': value.contractId,
+        'walletId': value.walletId,
+        'username': value.username,
         'updatedAt': value.updatedAt,
         'createdAt': value.createdAt,
-        'contract': ContractModelToJSON(value.contract),
+        'wallet': PublicPlayerWalletToJSON(value.wallet),
     };
 }
 

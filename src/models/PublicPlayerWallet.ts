@@ -16,37 +16,37 @@ import { exists, mapValues } from '../runtime';
 /**
  * 
  * @export
- * @interface WalletModel
+ * @interface PublicPlayerWallet
  */
-export interface WalletModel {
+export interface PublicPlayerWallet {
     /**
      * This field has not had a description added.
      * @type {string}
-     * @memberof WalletModel
+     * @memberof PublicPlayerWallet
      */
     id?: string;
     /**
      * This field has not had a description added.
      * @type {string}
-     * @memberof WalletModel
+     * @memberof PublicPlayerWallet
      */
     address?: string;
 }
 
 /**
- * Check if a given object implements the WalletModel interface.
+ * Check if a given object implements the PublicPlayerWallet interface.
  */
-export function instanceOfWalletModel(value: object): boolean {
+export function instanceOfPublicPlayerWallet(value: object): boolean {
     let isInstance = true;
 
     return isInstance;
 }
 
-export function WalletModelFromJSON(json: any): WalletModel {
-    return WalletModelFromJSONTyped(json, false);
+export function PublicPlayerWalletFromJSON(json: any): PublicPlayerWallet {
+    return PublicPlayerWalletFromJSONTyped(json, false);
 }
 
-export function WalletModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): WalletModel {
+export function PublicPlayerWalletFromJSONTyped(json: any, ignoreDiscriminator: boolean): PublicPlayerWallet {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -57,7 +57,7 @@ export function WalletModelFromJSONTyped(json: any, ignoreDiscriminator: boolean
     };
 }
 
-export function WalletModelToJSON(value?: WalletModel | null): any {
+export function PublicPlayerWalletToJSON(value?: PublicPlayerWallet | null): any {
     if (value === undefined) {
         return undefined;
     }
