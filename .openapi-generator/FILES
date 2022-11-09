@@ -47,6 +47,7 @@ src/models/GetCurrencies200ResponseInner.ts
 src/models/GetCurrencies200ResponseInnerAllOf.ts
 src/models/GetCurrencyFees200Response.ts
 src/models/GetExchanges200ResponseInner.ts
+src/models/GetPlayerData200Response.ts
 src/models/GrantCollectionRoleRequest.ts
 src/models/GrantCurrencyRoleRequest.ts
 src/models/MintCollectionItemRequest.ts
@@ -60,6 +61,7 @@ src/models/SetCollectionApprovalRequest.ts
 src/models/SetCollectionItemTimelockRequest.ts
 src/models/SetCurrencyFeesRequest.ts
 src/models/SetExchangeOfferRequest.ts
+src/models/SetPlayerDataRequest.ts
 src/models/TransactionModel.ts
 src/models/TransferCollectionItemRequest.ts
 src/models/TransferCurrencyRequest.ts
