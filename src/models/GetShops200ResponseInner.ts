@@ -13,70 +13,71 @@
  */
 
 import { exists, mapValues } from '../runtime';
+import type { ContractModel } from './ContractModel';
+import {
+    ContractModelFromJSON,
+    ContractModelFromJSONTyped,
+    ContractModelToJSON,
+} from './ContractModel';
+
 /**
  * 
  * @export
- * @interface PlayerModel
+ * @interface GetShops200ResponseInner
  */
-export interface PlayerModel {
+export interface GetShops200ResponseInner {
     /**
      * This field has not had a description added.
      * @type {string}
-     * @memberof PlayerModel
+     * @memberof GetShops200ResponseInner
      */
     id?: string;
     /**
      * This field has not had a description added.
      * @type {string}
-     * @memberof PlayerModel
+     * @memberof GetShops200ResponseInner
      */
     gameId?: string;
     /**
      * This field has not had a description added.
      * @type {string}
-     * @memberof PlayerModel
+     * @memberof GetShops200ResponseInner
      */
-    walletId?: string;
+    contractId?: string;
     /**
      * This field has not had a description added.
      * @type {string}
-     * @memberof PlayerModel
-     */
-    username?: string;
-    /**
-     * This field has not had a description added.
-     * @type {string}
-     * @memberof PlayerModel
-     */
-    accessToken?: string;
-    /**
-     * This field has not had a description added.
-     * @type {string}
-     * @memberof PlayerModel
+     * @memberof GetShops200ResponseInner
      */
     updatedAt?: string;
     /**
      * This field has not had a description added.
      * @type {string}
-     * @memberof PlayerModel
+     * @memberof GetShops200ResponseInner
      */
     createdAt?: string;
+    /**
+     * 
+     * @type {ContractModel}
+     * @memberof GetShops200ResponseInner
+     */
+    contract?: ContractModel;
 }
 
 /**
- * Check if a given object implements the PlayerModel interface.
+ * Check if a given object implements the GetShops200ResponseInner interface.
  */
-export function instanceOfPlayerModel(value: object): boolean {
+export function instanceOfGetShops200ResponseInner(value: object): boolean {
     let isInstance = true;
 
     return isInstance;
 }
 
-export function PlayerModelFromJSON(json: any): PlayerModel {
-    return PlayerModelFromJSONTyped(json, false);
+export function GetShops200ResponseInnerFromJSON(json: any): GetShops200ResponseInner {
+    return GetShops200ResponseInnerFromJSONTyped(json, false);
 }
 
-export function PlayerModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): PlayerModel {
+export function GetShops200ResponseInnerFromJSONTyped(json: any, ignoreDiscriminator: boolean): GetShops200ResponseInner {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -84,15 +85,14 @@ export function PlayerModelFromJSONTyped(json: any, ignoreDiscriminator: boolean
         
         'id': !exists(json, 'id') ? undefined : json['id'],
         'gameId': !exists(json, 'gameId') ? undefined : json['gameId'],
-        'walletId': !exists(json, 'walletId') ? undefined : json['walletId'],
-        'username': !exists(json, 'username') ? undefined : json['username'],
-        'accessToken': !exists(json, 'accessToken') ? undefined : json['accessToken'],
+        'contractId': !exists(json, 'contractId') ? undefined : json['contractId'],
         'updatedAt': !exists(json, 'updatedAt') ? undefined : json['updatedAt'],
         'createdAt': !exists(json, 'createdAt') ? undefined : json['createdAt'],
+        'contract': !exists(json, 'contract') ? undefined : ContractModelFromJSON(json['contract']),
     };
 }
 
-export function PlayerModelToJSON(value?: PlayerModel | null): any {
+export function GetShops200ResponseInnerToJSON(value?: GetShops200ResponseInner | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -103,11 +103,10 @@ export function PlayerModelToJSON(value?: PlayerModel | null): any {
         
         'id': value.id,
         'gameId': value.gameId,
-        'walletId': value.walletId,
-        'username': value.username,
-        'accessToken': value.accessToken,
+        'contractId': value.contractId,
         'updatedAt': value.updatedAt,
         'createdAt': value.createdAt,
+        'contract': ContractModelToJSON(value.contract),
     };
 }
 

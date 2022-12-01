@@ -16,67 +16,55 @@ import { exists, mapValues } from '../runtime';
 /**
  * 
  * @export
- * @interface PlayerModel
+ * @interface LootboxManagerModel
  */
-export interface PlayerModel {
+export interface LootboxManagerModel {
     /**
      * This field has not had a description added.
      * @type {string}
-     * @memberof PlayerModel
+     * @memberof LootboxManagerModel
      */
     id?: string;
     /**
      * This field has not had a description added.
      * @type {string}
-     * @memberof PlayerModel
+     * @memberof LootboxManagerModel
      */
     gameId?: string;
     /**
      * This field has not had a description added.
      * @type {string}
-     * @memberof PlayerModel
+     * @memberof LootboxManagerModel
      */
-    walletId?: string;
+    contractId?: string;
     /**
      * This field has not had a description added.
      * @type {string}
-     * @memberof PlayerModel
-     */
-    username?: string;
-    /**
-     * This field has not had a description added.
-     * @type {string}
-     * @memberof PlayerModel
-     */
-    accessToken?: string;
-    /**
-     * This field has not had a description added.
-     * @type {string}
-     * @memberof PlayerModel
+     * @memberof LootboxManagerModel
      */
     updatedAt?: string;
     /**
      * This field has not had a description added.
      * @type {string}
-     * @memberof PlayerModel
+     * @memberof LootboxManagerModel
      */
     createdAt?: string;
 }
 
 /**
- * Check if a given object implements the PlayerModel interface.
+ * Check if a given object implements the LootboxManagerModel interface.
  */
-export function instanceOfPlayerModel(value: object): boolean {
+export function instanceOfLootboxManagerModel(value: object): boolean {
     let isInstance = true;
 
     return isInstance;
 }
 
-export function PlayerModelFromJSON(json: any): PlayerModel {
-    return PlayerModelFromJSONTyped(json, false);
+export function LootboxManagerModelFromJSON(json: any): LootboxManagerModel {
+    return LootboxManagerModelFromJSONTyped(json, false);
 }
 
-export function PlayerModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): PlayerModel {
+export function LootboxManagerModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): LootboxManagerModel {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -84,15 +72,13 @@ export function PlayerModelFromJSONTyped(json: any, ignoreDiscriminator: boolean
         
         'id': !exists(json, 'id') ? undefined : json['id'],
         'gameId': !exists(json, 'gameId') ? undefined : json['gameId'],
-        'walletId': !exists(json, 'walletId') ? undefined : json['walletId'],
-        'username': !exists(json, 'username') ? undefined : json['username'],
-        'accessToken': !exists(json, 'accessToken') ? undefined : json['accessToken'],
+        'contractId': !exists(json, 'contractId') ? undefined : json['contractId'],
         'updatedAt': !exists(json, 'updatedAt') ? undefined : json['updatedAt'],
         'createdAt': !exists(json, 'createdAt') ? undefined : json['createdAt'],
     };
 }
 
-export function PlayerModelToJSON(value?: PlayerModel | null): any {
+export function LootboxManagerModelToJSON(value?: LootboxManagerModel | null): any {
     if (value === undefined) {
         return undefined;
     }
@@ -103,9 +89,7 @@ export function PlayerModelToJSON(value?: PlayerModel | null): any {
         
         'id': value.id,
         'gameId': value.gameId,
-        'walletId': value.walletId,
-        'username': value.username,
-        'accessToken': value.accessToken,
+        'contractId': value.contractId,
         'updatedAt': value.updatedAt,
         'createdAt': value.createdAt,
     };

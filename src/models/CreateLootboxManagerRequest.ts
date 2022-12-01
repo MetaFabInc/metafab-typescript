@@ -16,22 +16,22 @@ import { exists, mapValues } from '../runtime';
 /**
  * 
  * @export
- * @interface CreateCollectionRequest
+ * @interface CreateLootboxManagerRequest
  */
-export interface CreateCollectionRequest {
+export interface CreateLootboxManagerRequest {
     /**
-     * The blockchain you want to deploy this item collection on. Support for new blockchains are added over time.
+     * The blockchain you want to deploy this lootbox manager on. Support for new blockchains are added over time.
      * @type {string}
-     * @memberof CreateCollectionRequest
+     * @memberof CreateLootboxManagerRequest
      */
-    chain: CreateCollectionRequestChainEnum;
+    chain: CreateLootboxManagerRequestChainEnum;
 }
 
 
 /**
  * @export
  */
-export const CreateCollectionRequestChainEnum = {
+export const CreateLootboxManagerRequestChainEnum = {
     Ethereum: 'ETHEREUM',
     Goerli: 'GOERLI',
     Matic: 'MATIC',
@@ -39,24 +39,24 @@ export const CreateCollectionRequestChainEnum = {
     Arbitrum: 'ARBITRUM',
     Arbitrumgoerli: 'ARBITRUMGOERLI'
 } as const;
-export type CreateCollectionRequestChainEnum = typeof CreateCollectionRequestChainEnum[keyof typeof CreateCollectionRequestChainEnum];
+export type CreateLootboxManagerRequestChainEnum = typeof CreateLootboxManagerRequestChainEnum[keyof typeof CreateLootboxManagerRequestChainEnum];
 
 
 /**
- * Check if a given object implements the CreateCollectionRequest interface.
+ * Check if a given object implements the CreateLootboxManagerRequest interface.
  */
-export function instanceOfCreateCollectionRequest(value: object): boolean {
+export function instanceOfCreateLootboxManagerRequest(value: object): boolean {
     let isInstance = true;
     isInstance = isInstance && "chain" in value;
 
     return isInstance;
 }
 
-export function CreateCollectionRequestFromJSON(json: any): CreateCollectionRequest {
-    return CreateCollectionRequestFromJSONTyped(json, false);
+export function CreateLootboxManagerRequestFromJSON(json: any): CreateLootboxManagerRequest {
+    return CreateLootboxManagerRequestFromJSONTyped(json, false);
 }
 
-export function CreateCollectionRequestFromJSONTyped(json: any, ignoreDiscriminator: boolean): CreateCollectionRequest {
+export function CreateLootboxManagerRequestFromJSONTyped(json: any, ignoreDiscriminator: boolean): CreateLootboxManagerRequest {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -66,7 +66,7 @@ export function CreateCollectionRequestFromJSONTyped(json: any, ignoreDiscrimina
     };
 }
 
-export function CreateCollectionRequestToJSON(value?: CreateCollectionRequest | null): any {
+export function CreateLootboxManagerRequestToJSON(value?: CreateLootboxManagerRequest | null): any {
     if (value === undefined) {
         return undefined;
     }

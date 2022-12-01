@@ -23,61 +23,61 @@ import {
 /**
  * 
  * @export
- * @interface CreateCollection200Response
+ * @interface CreateLootboxManager200Response
  */
-export interface CreateCollection200Response {
+export interface CreateLootboxManager200Response {
     /**
      * This field has not had a description added.
      * @type {string}
-     * @memberof CreateCollection200Response
+     * @memberof CreateLootboxManager200Response
      */
     id?: string;
     /**
      * This field has not had a description added.
      * @type {string}
-     * @memberof CreateCollection200Response
+     * @memberof CreateLootboxManager200Response
      */
     gameId?: string;
     /**
      * This field has not had a description added.
      * @type {string}
-     * @memberof CreateCollection200Response
+     * @memberof CreateLootboxManager200Response
      */
     contractId?: string;
     /**
      * This field has not had a description added.
      * @type {string}
-     * @memberof CreateCollection200Response
+     * @memberof CreateLootboxManager200Response
      */
     updatedAt?: string;
     /**
      * This field has not had a description added.
      * @type {string}
-     * @memberof CreateCollection200Response
+     * @memberof CreateLootboxManager200Response
      */
     createdAt?: string;
     /**
      * 
      * @type {CreateCollection200ResponseAllOfContract}
-     * @memberof CreateCollection200Response
+     * @memberof CreateLootboxManager200Response
      */
     contract?: CreateCollection200ResponseAllOfContract;
 }
 
 /**
- * Check if a given object implements the CreateCollection200Response interface.
+ * Check if a given object implements the CreateLootboxManager200Response interface.
  */
-export function instanceOfCreateCollection200Response(value: object): boolean {
+export function instanceOfCreateLootboxManager200Response(value: object): boolean {
     let isInstance = true;
 
     return isInstance;
 }
 
-export function CreateCollection200ResponseFromJSON(json: any): CreateCollection200Response {
-    return CreateCollection200ResponseFromJSONTyped(json, false);
+export function CreateLootboxManager200ResponseFromJSON(json: any): CreateLootboxManager200Response {
+    return CreateLootboxManager200ResponseFromJSONTyped(json, false);
 }
 
-export function CreateCollection200ResponseFromJSONTyped(json: any, ignoreDiscriminator: boolean): CreateCollection200Response {
+export function CreateLootboxManager200ResponseFromJSONTyped(json: any, ignoreDiscriminator: boolean): CreateLootboxManager200Response {
     if ((json === undefined) || (json === null)) {
         return json;
     }
@@ -92,7 +92,7 @@ export function CreateCollection200ResponseFromJSONTyped(json: any, ignoreDiscri
     };
 }
 
-export function CreateCollection200ResponseToJSON(value?: CreateCollection200Response | null): any {
+export function CreateLootboxManager200ResponseToJSON(value?: CreateLootboxManager200Response | null): any {
     if (value === undefined) {
         return undefined;
     }
