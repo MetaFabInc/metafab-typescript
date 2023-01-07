@@ -1,4 +1,4 @@
-## metafab-typescript-fetch@1.4.2
+## metafab-typescript-fetch@1.4.3
 
 This generator creates TypeScript/JavaScript client that utilizes [Fetch API](https://fetch.spec.whatwg.org/). The generated Node module can be used in the following environments:
 
@@ -36,7 +36,7 @@ navigate to the folder of your consuming project and run one of the following co
 _published:_
 
 ```
-npm install metafab-typescript-fetch@1.4.2 --save
+npm install metafab-typescript-fetch@1.4.3 --save
 ```
 
 _unPublished (not recommended):_
