@@ -9,6 +9,7 @@ export * from './BatchTransferCollectionItemsRequest';
 export * from './BatchTransferCurrencyRequest';
 export * from './BurnCollectionItemRequest';
 export * from './BurnCurrencyRequest';
+export * from './CollectionItem';
 export * from './CollectionModel';
 export * from './ContractModel';
 export * from './CreateCollection200Response';

@@ -22,6 +22,7 @@ src/models/BatchTransferCollectionItemsRequest.ts
 src/models/BatchTransferCurrencyRequest.ts
 src/models/BurnCollectionItemRequest.ts
 src/models/BurnCurrencyRequest.ts
+src/models/CollectionItem.ts
 src/models/CollectionModel.ts
 src/models/ContractModel.ts
 src/models/CreateCollection200Response.ts
